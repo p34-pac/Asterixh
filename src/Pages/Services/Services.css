@@ -1,0 +1,35 @@
+.services{
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.serviceList{
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    perspective: 500px;
+}
+.serviceList .ServiceCard{
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+.serviceList .ServiceCard:last-child:hover{
+    transform-style: preserve-3d;
+    transform:  rotateY(-5deg) rotateX(5deg) ;
+    transition-duration: 1s;
+}
+.serviceList .ServiceCard:first-child:hover{
+    transform-style: preserve-3d;
+    transform:  rotateY(5deg) rotateX(5deg) ;
+    transition-duration: 1s;
+}

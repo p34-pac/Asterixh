@@ -1,0 +1,123 @@
+.Works .worksList{
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Works .worksList .worktypes {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+.Works .worksList .worktypes .type{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--primary-fade);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.Works .worksList .worktypes .type:not([data-pres=true]):hover{
+    background-color: var(--primary) ;
+    color: var(--white);
+    transition-duration: 200ms;
+
+    opacity: 50%;
+}
+.Works .worksList .worktypes .type[data-pres=true]{
+    background-color: var(--primary);
+    transition-duration: 200ms;
+    color: var(--white);
+
+}
+.Works .worksList .overFlowWorks{
+    width: 90vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+} 
+.Works .worksList .overFlowWorks .worksCont{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 5px;
+
+
+} 
+.Works .worksList .worksCont section{
+    scroll-snap-align: start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 90vw;
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.Works .worksList .worksCont section:not([data-pres=true]){
+    display: none;
+    animation-delay: 2s;
+}
+.Works .worksList .worksCont section[data-pres=true]{
+    animation: translateIn 500ms linear both;
+}
+.Works .worksList .worksCont section .ProjectCard{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.Works .worksList .worksCont section.hover .ProjectCard{
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+.Works .worksList .worksCont section.hover .ProjectCard:hover{
+    filter: grayscale(0%) !important;
+}
+
+.Works .worksList .worksCont section .ProjectCard{
+    max-width: 100%;
+    flex-grow: 1;
+    flex-basis: 250px;
+    box-shadow: none;
+}
+
+
+@media screen and (max-width: 300px ) {
+    .Works .worksList .worksCont section .ProjectCard .projectContext .cta {
+        flex-wrap: wrap;
+      }
+    .Works .worksList .worksCont section .ProjectCard .projectContext .cta .button{
+        flex-grow: 1;
+    }
+    .Works .worksList .worksCont section .ProjectCard .projectContext .cta .button .Dbutton{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

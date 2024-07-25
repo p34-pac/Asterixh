@@ -1,0 +1,81 @@
+.button{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    perspective: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+.Dbutton{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 20px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+}
+.Dbutton .inner {
+    width: fit-content;
+    height: fit-content;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Dbutton:active{
+    transform: scale(0.951);
+    transition-duration: 200ms;
+}
+.Dbutton.perspective:hover{
+    position: relative;
+    transform-style: preserve-3d;
+    transform-box: fill-box;
+    transform: rotateX(var(--deg));
+    transition-duration: 1s;
+}
+
+.Dbutton.hoverGrow:hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary);
+    animation: grow 500ms linear forwards;
+    z-index: 0;
+}
+.Dbutton.hoverGrow:hover .inner{
+    color: var(--white);
+    transition-duration: 500ms;
+}
+
+.Dbutton.hoverGrowRev:hover::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-fadeOff);
+    animation: grow 500ms linear forwards;
+    z-index: 0;
+}
+.Dbutton.hoverGrowRev:hover .inner{
+    color: var(--primary);
+    transition-duration: 500ms;
+}

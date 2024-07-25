@@ -1,0 +1,133 @@
+
+.ProjectCard{
+    width: 300px;
+    height: fit-content;
+    padding-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--primary-fadeOff);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #10051272,
+                -1px -1px 10px #10051272;
+}
+
+.ProjectCard:hover{
+    transform-style: preserve-3d;
+    transform: rotateX(2deg);
+    transition-duration: 1s;
+}
+.ProjectCard .productPlaceHolder {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.ProjectCard:hover .productPlaceHolder img{
+    transform: scale(1.1);
+    transition-duration: 10s;
+}
+
+.ProjectCard .projectContext {
+    width: calc(100% - 20px) ;
+    padding: 0 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
+}
+.ProjectCard .projectContext .projectTitle{
+    font-size: 24px;
+    font-weight: 700;
+      color: var(--tertiary);
+
+}
+.ProjectCard .projectContext .projectDetail{
+    font-size: 16px;
+    font-weight: 400;
+      color: var(--tertiary);
+}
+
+
+.ProjectCard .projectContext .cta {
+    width: calc(100%);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 1;
+  }
+
+
+ .ProjectCard .projectContext .cta .button .Dbutton{
+    width: fit-content;
+      background-color: var(--primary-fadeOff);
+      border: 2px solid var(--primary) ;
+      color: var(--primary);
+  }
+  .ProjectCard .projectContext .cta .button .Dbutton span{
+    font-size: 12px;
+}
+ .ProjectCard .projectContext .cta .button:first-child .Dbutton{
+    background-color: var(--primary); 
+    color: var(--white);
+ }
+
+ .ProjectCard[data-ort=horizontal]{
+    width: fit-content;
+    max-width: 500px;
+    height: 200px;
+    flex-direction: row;
+    padding-bottom: 0;
+}
+.ProjectCard[data-ort=horizontal] .productPlaceHolder {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.ProjectCard[data-ort=horizontal]  .projectContext {
+    width: calc(60% - (2% + 20px)) ;
+    justify-content: center;
+    height: 100%;
+    
+}
+.ProjectCard[data-ort=horizontal] .projectContext .cta {
+    width: calc(100%);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    gap: 10px;
+    z-index: 1;
+  }
+ 
+
+
+
+
+@media screen and (max-width:750px ) {
+    .ProjectCard .projectContext .projectTitle{
+        font-size: 16px;
+        
+    
+    }
+    .ProjectCard .projectContext .projectDetail{
+        font-size: 14px;
+        
+    }
+    .ProjectCard .projectContext .cta {
+        font-size: 12px;
+        
+      }
+    
+}
+

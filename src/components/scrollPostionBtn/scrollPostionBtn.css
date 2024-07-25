@@ -1,0 +1,23 @@
+.scrollOthers{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.scrollOthers .dot{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    background-color: var(--secondary-2-fadeOff);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.scrollOthers .dot[data-pres=true]{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    background-color: var(--secondary-2);
+    transition-duration: 200ms;
+}

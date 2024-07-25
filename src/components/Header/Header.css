@@ -1,0 +1,97 @@
+
+.mainHeader{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+.topSection{
+    width: calc(90% - 100px);
+    padding: 10px 50px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 5%;
+    top: 20px;
+    z-index: 3;
+    background-color: #0d040e65;
+    border-radius: 50px;
+    backdrop-filter: blur(50px);
+}
+
+.navLinks{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.navLinks a{
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+.navLinks a.active{
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
+    cursor: default;
+
+}
+.navLinks a:not(.active):hover{
+    color: var(--primary);
+    
+    transition-duration: 200ms;
+}
+.navLinks a:not(.active):hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid var(--white);
+    animation: grow 200ms linear forwards;
+}
+
+.logo{
+    width: 150px;
+}
+.logo img{
+    width: 100%;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .navLinks{
+        gap: 3dvw;
+    }
+    .navLinks a{
+        font-size: 2dvw;
+    }
+    .logo{
+        width: 20dvw;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .navLinks{
+        display: none;
+    }
+    .topSection{
+        width: 50vw;
+        min-width: 100px;
+        justify-content: flex-end;
+        left: calc((100vw - 50vw)/5);
+    }
+    .logo{
+        width: 150px;
+        max-width: 50dvw;
+    }
+  }

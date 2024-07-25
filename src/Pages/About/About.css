@@ -1,0 +1,322 @@
+/* .aboutme----------------------- */
+.about .aboutMe{
+    width: calc(100% - 200px);
+    height: fit-content;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+.about .readOnMe{
+    width: calc(100%);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.about .readOnMe .imgBox {
+  width: 30%;
+  min-width: 300px;
+  max-width: 100%;
+  height: 400px;
+  /* overflow: hidden; */
+  border-radius: 5px;
+  perspective: 500px;
+  position: relative;
+  overflow: hidden !important;
+  position: sticky;
+  top: 0;
+
+}
+.about .readOnMe .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: leftEnter 1s linear forwards;
+    border-radius: 10px;
+    max-width: 100%;
+
+}
+.about .readOnMe .imgBox:hover img{
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transform: rotateY(30deg);
+    transition-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.about .readOnMe .contextBox{
+    width: calc(70% - 100px);
+    /* min-width: calc(70% - 300px); */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: -5px;
+}
+.about .readOnMe .contextBox .bio, .about .readOnMe .contextBox .productivity  {
+  width: 100%;
+  height: fit-content;
+  text-align: left;
+    color: var(--tertiary);
+}
+.about .readOnMe .contextBox .bio h3, .about .readOnMe .contextBox .productivity h3{
+    margin: 0;
+}
+.about .readOnMe .contextBox .bio{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.about .readOnMe .contextBox .bio .text{
+    width: calc(100%);
+    height: fit-content;
+    max-height: 400px;
+
+    overflow-y: scroll;
+}
+
+.about .readOnMe .contextBox .bio p{
+    text-wrap: balance;
+}
+
+.about .readOnMe .contextBox .productivity{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.about .readOnMe .contextBox .productivity .overFlowBox{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.about .readOnMe .contextBox .productivity .overFlowBox .skillCont{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 5px;
+}
+.about .readOnMe .contextBox .productivity .overFlowBox .skillCont::-webkit-scrollbar{
+    display: none;
+}
+.about .readOnMe .contextBox .productivity .overFlowBox .skillCont .SkillCard{
+    scroll-snap-align: start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+}
+
+
+
+/* skills */
+.about .skills{
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about .skills .skilltypes {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+.about .skills .skilltypes .type{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--primary-fade);
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.about .skills .skilltypes .type:not([data-pres=true]):hover{
+    background-color: var(--primary) ;
+    color: var(--white);
+    transition-duration: 200ms;
+
+    opacity: 50%;
+}
+.about .skills .skilltypes .type[data-pres=true]{
+    background-color: var(--primary);
+    transition-duration: 200ms;
+    color: var(--white);
+
+}
+.about .skills .overFlowSkills{
+    width: 90vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+} 
+.about .skills .overFlowSkills .skillsCont{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 5px;
+
+
+} 
+.about .skills .skillsCont section{
+    scroll-snap-align: start;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 90vw;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about .skills .skillsCont section .SkillCard{
+    max-width: 250px;
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+
+
+
+@media screen and (max-width: 750px ) {
+    .about .aboutMe{
+        width: calc(100% - 40px);
+        padding: 0 20px;
+    }
+    .about .readOnMe{
+        width: calc(100% - 40px);
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .about .readOnMe .imgBox {
+        display: block;
+        flex-basis: 300px;
+        flex-grow: 1;
+        
+      }
+      .about .readOnMe .contextBox{
+        width: 100%;
+        min-width: calc(100%);
+    }
+    .about .readOnMe .contextBox .bio{
+        width: 100%;
+        height: fit-content;
+    }
+    .about .readOnMe .contextBox .bio .smallScr{
+        display: block;
+        width: 20px !important;
+        height: 400px;
+        zoom: 40%;
+        display: none;
+
+    }
+    .about .readOnMe .contextBox .bio .smallScr img{
+        width: 100% !important;
+        height: 100%;
+    }
+    .about .readOnMe .contextBox .bio .text{
+        width: calc(100%);
+        width: calc(100%);
+        height: fit-content;
+        max-height: fit-content;
+    
+        overflow-y: hidden;
+    }
+
+
+
+}
+@media screen and (max-width:450px ) {
+
+    .about .skills .skillsCont section .SkillCard{
+        max-width: 100%;
+        flex-grow: 1;
+        flex-basis: 200px;
+    }
+
+
+}
+
+
+@media screen and (max-width:400px ) {
+    .about .aboutMe{
+        width: calc(100% - 40px);
+        height: fit-content;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    .about .readOnMe{
+        width: calc(100% - 40px);
+    }
+    .about .readOnMe .imgBox {
+        display: block;
+        width: calc(100%);
+        min-width: 0;
+        max-width: 100%;
+        height: 400px;
+        overflow: hidden !important;
+        border-radius: 5px;
+        perspective: 500px;
+        position: relative;
+      }
+
+    .about .readOnMe .contextBox .bio .smallScr{
+        display: none;
+    }
+
+    .about .readOnMe .contextBox .bio .text{
+        width: calc(100%);
+    }
+    .about .readOnMe .contextBox .bio p{
+        text-wrap: pretty;
+    }
+
+}
