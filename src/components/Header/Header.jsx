@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
@@ -7,7 +8,7 @@ import Hero from './Hero'
 import Button from '../button/Button'
 import Menu from '../Menu/Menu'
 
-function Header({pres}) {
+function Header({pres, hero={thirdSection:"", secondSection:"", secondShow:true, thirdShow:true}}) {
   return (
     <>
           <Menu pres={pres}/>
@@ -24,7 +25,7 @@ function Header({pres}) {
                   </div>
               </div>
               <Hero
-                  thirdSection={<Button>Get in touch</Button>} />
+                  thirdSection={hero.thirdSection} secondSection={hero.secondSection} secondShow={hero.secondShow} thirdShow={hero.thirdShow} />
           </div>
     </>
   )

@@ -210,8 +210,38 @@
         flex-basis: 200px;
     }
 }
+@media screen and (max-width: 640px ) {
+    .home .recentWorks .rWC .ProjectCard{
+        width: 200px;
+        flex-grow: 1;
+        flex-basis: 200px;
+    }
+    .home .recentWorks .rWC .ProjectCard .projectContext .cta .button{
+        flex-grow: 1;
+    }
+    .home .recentWorks .rWC .ProjectCard .projectContext .cta .button .Dbutton{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 460px ) {
+    .home .recentWorks .rWC .ProjectCard{
+        width: 150px;
+        flex-grow: 1;
+        flex-basis: 150px;
+    }
+    .home .recentWorks .rWC .ProjectCard .projectContext .cta {
+        flex-wrap: wrap;
+      }
+    .home .recentWorks .rWC .ProjectCard .projectContext .cta .button{
+        flex-grow: 1;
+        flex-basis: 100%;
 
-
+    }
+}
 @media screen and (max-width:400px ) {
     .home .intro{
         width: calc(100% - 40px);
@@ -243,8 +273,13 @@
         width: calc(100% - 40px);
         padding: 0 20px;
     }
-    .home .recentWorks .rWC .ProjectCard{
-        flex-grow: 1;
-        flex-basis: 200px;
-    }
+
 }
+
+@media screen and (max-width: 300px ) {
+    .home .recentWorks .rWC .ProjectCard .projectContext .cta {
+        flex-wrap: wrap;
+      }
+    
+}
+

@@ -94,6 +94,17 @@
     top: -2px;
     z-index: 5;
 }
+.menu.shown .menuCover{
+    width: calc(15px + (100vw - 300px));
+    height: 100vh;
+    background-color: #1005127d;
+    /* opacity: 50%; */
+    backdrop-filter: blur(5px);
+    position: absolute;
+    right: calc(-3px - (100vw - 100%));
+    top: -20px;
+}
+
 .menu .slided .userDetails{
     width: calc(90% - 20px);
     height: fit-content;
@@ -163,6 +174,8 @@
     gap: 10px;
     position: relative;
     padding: 10px;
+    user-select: none;
+    
 }
 .slided .majorPageNav .link.pres{
     width: calc(100% - 45px);
@@ -194,7 +207,7 @@
 
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 501px) {
     .menu{
         display: none;
     }

@@ -43,7 +43,7 @@
 .ServiceCard .illustration {
   width: calc(100% - 20px);
   height: 150px;
-  background-color: var(--primary-fade);
+  background-color: var(--primary-fadeOff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,7 @@
   width: 100%;
 }
 .ServiceCard .cta .Dbutton{
-  background-color: var(--primary-fade);
+  background-color: var(--primary-fadeOff);
   width: 100%;
 
 }

@@ -7,6 +7,7 @@ import SkillCard from '../../components/SkillCard/SkillCard'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
 import Footer from '../../components/Footer/Footer'
 import ScrollPostionBtn from '../../components/scrollPostionBtn/scrollPostionBtn'
+import Button from '../../components/button/Button'
 
 function Home() {
     const [Hover, setHover] = useState(false)
@@ -32,10 +33,10 @@ function Home() {
         console.log(A, I);
     }, [A, I])
 
-
+    
   return (
     <div className='home'>
-        <Header pres="home" />
+        <Header pres="home" hero={{thirdSection:<><b>Discover my Creations</b><Button>Get in touch</Button></>, secondSection:"Welcome to my portfolio", secondShow:true, thirdShow:true}}/>
         <div className="intro">
             <div className="imgBox">
                 <img className='imgFill' src={introImg} alt="introImg" />
@@ -74,7 +75,7 @@ function Home() {
                 <ProjectCard setHoverState={(val) => setHover(val)}/>
             </div>
         </div>
-        <Footer/>
+        <Footer pres='home'/>
     </div>
   )
 }

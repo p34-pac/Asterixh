@@ -109,6 +109,14 @@
     .Works .worksList .worksCont section .ProjectCard .projectContext .cta {
         flex-wrap: wrap;
       }
+    
+}
+@media screen and (max-width: 640px ) {
+    .Works .worksList .worksCont section .ProjectCard{
+        width: 200px;
+        flex-grow: 1;
+        flex-basis: 200px;
+    }
     .Works .worksList .worksCont section .ProjectCard .projectContext .cta .button{
         flex-grow: 1;
     }
@@ -120,4 +128,20 @@
         justify-content: center;
     }
 }
+@media screen and (max-width: 460px ) {
+    .Works .worksList .worksCont section .ProjectCard{
+        width: 150px;
+        flex-grow: 1;
+        flex-basis: 150px;
+    }
+    .Works .worksList .worksCont section .ProjectCard .projectContext .cta {
+        flex-wrap: wrap;
+      }
+    .Works .worksList .worksCont section .ProjectCard .projectContext .cta .button{
+        flex-grow: 1;
+        flex-basis: 100%;
+
+    }
+}
+
 

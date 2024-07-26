@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import { changeScroll } from '../../components/scrollPostionBtn/scrollPostionBtn'
 import ProjectCard from '../../components/ProjectCard/ProjectCard'
+import Button from '../../components/button/Button'
 
 function Works() {
     const [Hover, setHover] = useState(false)
@@ -13,7 +14,8 @@ function Works() {
 
   return (
     <div className='Works'>
-        <Header pres="works" />
+        <Header pres="works" hero={{thirdSection:"Recent work showcase", secondSection:"Explore my projects", secondShow:true, thirdShow:true}}/>
+
         <div className="worksList">
             <h1 className='sectionHead'>works</h1>
 
@@ -46,7 +48,7 @@ function Works() {
                 </div>
             </div>
         </div>
-        <Footer/>
+        <Footer pres='works'/>
 
     </div>
   )

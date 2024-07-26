@@ -1,14 +1,24 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Menu.css'
 import { goTo } from '../navigate/navigate'
+import img from '../../assets/images/person.png'
 
 function Menu({pres}) {
 
     const [opened, setOpened] = useState(null)
+
+    useEffect(() => {
+      if(opened == true){
+        document.body.style.overflow = 'hidden'
+      }else{
+        document.body.style.overflow = 'auto'
+      }
+    }, [opened])
+    
   return (
-    <div className="menu">
+    <div className={opened==true?"menu shown":"menu"}>
         <span onClick={()=>setOpened(true)} className="opener">
             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_16_4569)">
@@ -21,6 +31,7 @@ function Menu({pres}) {
                 </defs>
             </svg>
         </span>
+        <div className="menuCover"></div>
         <div className={opened==true?"slided true":opened==false?"slided false":"slided"}>
             <span className="closer" onClick={()=>setOpened(false)}>
                 <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,14 +46,14 @@ function Menu({pres}) {
                 </svg>
             </span>
             <section className="userDetails">
-                <span className="userDp"></span>
+                <span className="userDp"><img src={img} alt="img user" /></span>
                 <span className="userNameMail">
                     <b className="name">Peter Paul</b>
                     <b className="mail">peterpaultolulope@gmail.com</b>
                 </span>
             </section>
             <div className="majorPageNav">
-                <span onClick={() => goTo("/")} className={pres=="home"?'link pres': 'link'}>
+                <span onClick={() => pres!=="home"?goTo("/"):null } className={pres=="home"?'link pres': 'link'}>
                     <i className="ICN-link-icon">
                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_12_487)">
@@ -57,7 +68,7 @@ function Menu({pres}) {
                     </i>
                     <b className="text">Home</b>
                 </span>
-                <span onClick={() => goTo("/about")} className={pres=="about"?'link pres': 'link'}>
+                <span onClick={() => pres!=="about"?goTo("/about"):null }  className={pres=="about"?'link pres': 'link'}>
                     <i className="ICN-link-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_12_483)">
@@ -72,7 +83,7 @@ function Menu({pres}) {
                     </i>
                     <b className="text">About</b>
                 </span>
-                <span onClick={() => goTo("/contact-me")} className={pres=="contact-me"?'link pres': 'link'}>
+                <span onClick={() => pres!=="contact-me"?goTo("/contact-me"):null } className={pres=="contact-me"?'link pres': 'link'}>
                     <i className="ICN-link-icon">
                         <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_12_486)">
@@ -87,7 +98,7 @@ function Menu({pres}) {
                     </i>
                     <b className="text">Contact</b>
                 </span>
-                <span onClick={() => goTo("/works")} className={pres=="works"?'link pres': 'link'}>
+                <span onClick={() => pres!=="works"?goTo("/works"):null } className={pres=="works"?'link pres': 'link'}>
                     <i className="ICN-link-icon">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_12_480)">
@@ -103,7 +114,7 @@ function Menu({pres}) {
                     </i>
                     <b className="text">Works</b>
                 </span>
-                <span onClick={() => goTo("/services")} className={pres=="services"?'link pres': 'link'}>
+                <span onClick={() => pres!=="services"?goTo("/services"):null } className={pres=="services"?'link pres': 'link'}>
                     <i className="ICN-link-icon">
                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_12_484)">

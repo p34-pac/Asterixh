@@ -28,6 +28,10 @@
     cursor: pointer;
     gap: 10px;
     position: relative;
+    user-select: none;
+}
+.Footer .link.pres{
+    display: none;
 }
 .Footer .link .ICN-link-icon{
     width: 14px;

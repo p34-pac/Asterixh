@@ -17,7 +17,7 @@
 
 .ProjectCard:hover{
     transform-style: preserve-3d;
-    transform: rotateX(2deg);
+    transform: rotateX(5deg);
     transition-duration: 1s;
 }
 .ProjectCard .productPlaceHolder {
@@ -124,10 +124,33 @@
         font-size: 14px;
         
     }
-    .ProjectCard .projectContext .cta {
-        font-size: 12px;
+    .ProjectCard .projectContext .cta .button .Dbutton span {
+        font-size: 2dvw;
+
         
       }
+}
+@media screen and (max-width:750px ) {
+    .ProjectCard .projectContext .cta .button .Dbutton span {
+        font-size: 1.5dvw;
+      }
+}
+@media screen and (max-width:460px ) {
+    .ProjectCard{
+        width: 150px;
+    }
+    .ProjectCard .projectContext .projectTitle{
+        font-size: 4dvw;
+        
     
+    }
+    .ProjectCard .projectContext .projectDetail{
+        font-size: 3dvw;
+        
+    }
+    .ProjectCard .projectContext .cta .button .Dbutton span {
+        font-size: 2.5dvw;
+      }
+
 }
 

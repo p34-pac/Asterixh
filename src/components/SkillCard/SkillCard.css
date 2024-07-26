@@ -68,6 +68,15 @@
     z-index: 0;
     opacity: 50%;
 }
+@media screen and (max-width:460px ) {
+    .SkillCard{
+        width: 150px;
+    }
+    .SkillCard .illustration {
+        width: 50px;
+        height: 50px;
+    }
+}
 
 
 

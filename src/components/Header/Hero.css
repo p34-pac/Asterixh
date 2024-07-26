@@ -55,6 +55,13 @@
     font-size: 35px;
     font-family: "kranky";
 }
+.hero .heroContext .content .third{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
 
 
 
@@ -101,6 +108,6 @@
         font-size: 6dvw;
     }
     .hero .heroContext .content .third b{
-        font-size: 6px;
+        font-size: 4dvw;
     }
 }

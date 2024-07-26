@@ -5,11 +5,13 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import ServiceCard from '../../components/ServiceCard/ServiceCard'
 import designer from '../../assets/svg/designer.svg'
+import Button from '../../components/button/Button'
 
 function Services() {
   return (
     <div className='Service'>
-        <Header pres="services" />
+        <Header pres="services" hero={{thirdSection:"What i offer", secondSection:"My design & dev services", secondShow:true, thirdShow:true}}/>
+
 
             <div className="services">
                 <h1 className='sectionHead'>My services</h1>
@@ -19,7 +21,7 @@ function Services() {
                 </div>
             </div>
 
-        <Footer/>
+        <Footer pres='services'/>
     </div>
   )
 }

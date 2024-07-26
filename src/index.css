@@ -41,11 +41,16 @@ body{
   display: none;
 }
 
+
 @font-face{
   font-family: "kranky";
   src: url("./assets/others/Kranky-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+a{
+  user-select: none;
 }
 
 .imgFill{
@@ -106,6 +111,15 @@ body{
 
   }
 }
+@keyframes reveal{
+  from{
+    opacity: 0%;
+
+  }
+  to{
+    opacity: 100%;
+  }
+}
 @keyframes translateIn{
   from{
     transform: translateY(100px);
@@ -114,6 +128,17 @@ body{
   }
   to{
     transform: translateY(0);
+    opacity: 100%;
+  }
+}
+@keyframes translateToLeftIn{
+  from{
+    transform: translateX(-100px);
+    opacity: 0%;
+
+  }
+  to{
+    transform: translateX(0);
     opacity: 100%;
 
 

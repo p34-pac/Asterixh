@@ -35,6 +35,11 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    user-select: none;
+
+}
+.Dbutton .inner *{
+    user-select: none;
 }
 .Dbutton:active{
     transform: scale(0.951);

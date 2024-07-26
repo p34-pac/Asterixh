@@ -1,24 +1,38 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './About.css'
 import introImg from '../../assets/images/person.png'
 import SkillCard from '../../components/SkillCard/SkillCard'
 import Header from '../../components/Header/Header'
 import { changeScroll } from '../../components/scrollPostionBtn/scrollPostionBtn'
 import Footer from '../../components/Footer/Footer'
+import { obs } from '../../components/observe.js/observe'
 
 
 
 function About() {
     const skillsScroll = useRef(null)
+    const skillsRef = useRef(null)
+    const readRef = useRef(null)
+    const cont = useRef(null)
     const [scroll, setScroll] = useState(0)
+    
 
+
+
+
+
+
+
+
+      
   return (
     <div className='about'>
-        <Header pres="about" />
-        <div className="aboutMe">
+        <Header pres="about" hero={{thirdSection:"Meet your designer and developer", secondSection:"My design & dev journey", secondShow:true, thirdShow:true}}/>
+
+        <div ref={cont} className="aboutMe">
         <h1 className='sectionHead'>About me</h1>
-        <div className="readOnMe">
+        <div ref={readRef} className="readOnMe">
             <div className="imgBox">
                 <img className='imgFill' src={introImg} alt="introImg" />
             </div>
@@ -47,7 +61,7 @@ function About() {
             </div>
         </div>
         </div>
-        <div className="skills">
+        <div ref={skillsRef}  className="skills">
             <h1 className='sectionHead'>Skills</h1>
 
             <ul className="skilltypes">
@@ -59,7 +73,7 @@ function About() {
 
             <div className="overFlowSkills">
                 <div className="skillsCont" ref={skillsScroll}>
-                    <section className="all">
+                    <section className="all" data-pres={scroll==0?"true":"False"}>
                         <SkillCard duration={2} skill="Figma"/>
                         <SkillCard duration={2} skill="Javascript"/>
                         <SkillCard duration={2} skill="Node Js"/>
@@ -68,23 +82,23 @@ function About() {
                         <SkillCard duration={2} skill="Chrome debugging"/>
 
                     </section>
-                    <section className="coding">
+                    <section className="coding" data-pres={scroll==1?"true":"False"}>
                         <SkillCard duration={2} skill="Javascript"/>
                         <SkillCard duration={2} skill="Node Js"/>
                         <SkillCard duration={2} skill="HTML/CSS"/>
                         <SkillCard duration={2} skill="React js"/>
                     </section>
-                    <section className="Technical">
+                    <section className="Technical" data-pres={scroll==2?"true":"False"}>
                         <SkillCard duration={2} skill="Chrome debugging"/>
                     </section>
-                    <section className="Design">
+                    <section className="Design" data-pres={scroll==3?"true":"False"}>
                         <SkillCard duration={2} skill="Figma"/>
                     </section>
                     
                 </div>
             </div>
         </div>
-        <Footer/>
+        <Footer pres='about'/>
 
     </div>
   )

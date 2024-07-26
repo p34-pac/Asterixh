@@ -18,7 +18,7 @@ function Contact() {
     }
   return (
     <div className='Contact'>
-        <Header pres="contact-me" />
+        <Header pres="contact-me" hero={{thirdSection:"Get in touch", secondSection:"Let's connect today", secondShow:true, thirdShow:true}}/>
 
         <div className="contacts">
             <h1 className='sectionHead'>Contact me</h1>
@@ -131,7 +131,7 @@ function Contact() {
                 </div>
             </div>
         </div>
-        <Footer/>
+        <Footer pres='contact-me'/>
     </div>
   )
 }

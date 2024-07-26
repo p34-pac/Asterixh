@@ -25,7 +25,7 @@ function Hero({thirdSection, secondSection,secondShow=true, thirdShow=true}) {
                     secondShow?<span className="sub"><b>{secondSection}</b></span>:null
                 }
                 {
-                    thirdShow?<span className="third">{thirdSection}</span>:null
+                    thirdShow?<span className="third">{typeof(thirdSection)=='string'?<b>{thirdSection}</b>:thirdSection}</span>:null
                 }
                 
             </div>
