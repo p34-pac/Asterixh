@@ -18,10 +18,10 @@ function Header({pres, hero={thirdSection:"", secondSection:"", secondShow:true,
                   <span className="logo"><img src={logo} alt="logo" /></span>
                   <div className="navLinks">
                       <a href="/" className={pres=="home"?'active':null}>Home</a>
-                      <a href="/about" className={pres=="about"?'active':null}>About</a>
-                      <a href="/contact-me" className={pres=="contact-me"?'active':null}>Contact</a>
-                      <a href="/works" className={pres=="works"?'active':null}>Works</a>
-                      <a href="/services" className={pres=="services"?'active':null}>Services</a>
+                      <a href="about" className={pres=="about"?'active':null}>About</a>
+                      <a href="contact-me" className={pres=="contact-me"?'active':null}>Contact</a>
+                      <a href="works" className={pres=="works"?'active':null}>Works</a>
+                      <a href="services" className={pres=="services"?'active':null}>Services</a>
                   </div>
               </div>
               <Hero
